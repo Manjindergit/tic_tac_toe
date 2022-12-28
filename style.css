@@ -1,0 +1,13 @@
+.container{
+    border: 10px solid black;
+    
+    width: auto;
+    height: 80vh;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.box{
+    border: 1px solid black;
+ 
+}
