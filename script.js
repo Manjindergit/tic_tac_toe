@@ -31,7 +31,13 @@ function updateMarks(index) {
     console.log('insuide update narks');
   //  arr[this.className.split(" ").pop()]=sign;
     this.textContent=sign;
-    checkWinner(sign);
+    if(sign==='X'){
+        sign='O';
+    }
+
+    else{
+    sign='X';
+    }
 
 
     
@@ -52,8 +58,10 @@ function signSwap(a){
         a='O';
     }
 
-    else
+    else{
     a='X';
+    }
+    return a;
 }
 
 function checkWinner(){
@@ -67,7 +75,7 @@ signSwap();
 buttons.forEach((div) => {
 
     div.addEventListener('click',
-        updateMarks, signSwap,{ once: true });
+        updateMarks, signSwap,console.log(sign),{ once: true });
 
 
 
